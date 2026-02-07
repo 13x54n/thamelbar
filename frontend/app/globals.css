@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0c0a09;
+  --foreground: #fafaf9;
+  --muted: #a8a29e;
+  --accent: #f59e0b;
+  --border: #292524;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  background: #0c0a09;
+  color: #fafaf9;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0c0a09 !important;
+  color: #fafaf9 !important;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Mobile-only: cap width so it always looks like a phone on larger screens */
+.mobile-only {
+  max-width: 430px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+/* Hide scrollbar but keep horizontal scroll */
+.scrollbar-none {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
